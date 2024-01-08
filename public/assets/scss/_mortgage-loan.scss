@@ -1,0 +1,106 @@
+.home-loan {
+    margin-top: -200px;
+}
+.dream-home {
+    padding: 135px 0 98px;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+    margin-top: -40px;
+    .pre-qualified {
+        margin-top: 60px;
+        a {
+            margin: 0 auto;
+            &:hover {
+                &::after {
+                    background-color: #3066be !important;
+                }
+            }
+        }
+    }
+}
+
+.mortgage-options {
+    .page-banner-img {
+        width: 48%;
+}
+}
+@media (max-width:1799px) {
+    .dream-home {
+        margin-top: -80px;
+    }
+}
+@media (max-width:1499px) {
+    .home-loan {
+        margin-top: -140px;
+    }
+    .dream-home {
+        margin-top: -50px;
+        padding: 100px 0 75px;
+    }
+    .mortgage-options {
+        .financial-list {
+            margin: 20px 0 0;
+            li {
+                font-size: 23px;
+                line-height: 26px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+@media (max-width:1199px) {
+    .dream-home {
+        margin-top: -100px;
+    }
+    .home-loan {
+        margin-top: -100px;
+    }
+    .mortgage-options {
+        .financial-block {
+            padding: 50px 0;
+        }
+        .banner-content {
+            position: relative;
+            top: unset;
+            transform: unset;
+        }
+        .page-banner-img {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width:767px) {
+    .mortgage-options {
+        .financial-list {
+            li {
+                font-size: 18px;
+                line-height: 25px;
+            }
+        }
+    }
+    .home-loan-banner {
+        .page-banner-img {
+            -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
+        }
+    }
+    .mortgage-options {
+        .financial-block {
+            box-shadow: none;
+        }
+    }
+    .dream-home {
+        text-align: center;
+        margin-top: 0;
+        padding: 62px 10px 58px;
+        -webkit-clip-path: polygon(0 0, 100% 7%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 7%, 100% 100%, 0% 100%);
+        .pre-qualified {
+            margin-top: 48px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,510 @@
+.discover {
+    .started-btn {
+        margin-top: 60px;
+    }
+    .slide-arrow{
+        width: 40px;
+        height: 40px;
+        background-color: #3066BE;
+        &.prev-arrow{
+            left: -50px;
+            background-image: url(../images/left-slider-arrow.svg);
+        }
+        &.next-arrow{
+            right: -50px;
+            background-image: url(../images/right-slider-arrow.svg);
+        }
+    }
+    .slick-dots {
+       
+            button {
+                background-color: $dark-blue;
+            }
+        
+            li.slick-active button {
+                background-color: #3066BE;
+            }
+        
+    }
+    .slider-item {
+        height: 100%;
+    }
+    // .slick-track {
+    //     display: flex;
+    //     .slider-item {
+    //         height: 100%;
+    //     }
+    // }
+    padding: 97px 0 20px;
+    .discover-slider {
+        position: relative;
+        z-index: 99;
+        padding: 0 80px;
+    }
+    .title-details {
+        p {
+            font-size: 28px;
+            line-height: 52px;
+        }
+    }
+    .cost-content {
+        background-color: $primary-color;
+        display: inline-block;
+        border-radius: 2px;
+        margin: 0 8px;
+        height: 100%;
+        .item-content {
+            padding: 20px 10px 25px;
+            h2 {
+                font-size: 30px;
+                line-height: 36px;
+                color: $yellow-color;
+                margin: 0 0 10px;
+            }
+            p {
+                font-size: 22px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+.services-main {
+    padding: 80px 0 0;
+    background-color: $white-color;
+    p {
+        font-size: 28px;
+        line-height: 52px;
+        text-align: center;
+    }
+    .quick-content {
+        h2 {
+            font-size: 35px;
+            line-height: 35px;
+            font-weight: $bold;
+            color: $primary-color;
+            margin: 0 0 14px;
+        }
+    }
+}
+
+
+.apply-content {
+    .bottom-section {
+        padding-left: 50px;
+    }
+     ul {
+        margin: 30px 0 62px;
+        padding: 0;
+        li {
+            display: flex;
+            align-items: center;
+            position: relative;
+            font-size: 25px;
+            line-height: 31px;
+            color: $primary-text;
+            span {
+                font-size: 75px;
+                line-height: 75px;
+                color: $primary-color;
+                display: flex;
+                justify-content: center;
+                font-weight: 700;
+                border-right: 1px solid $primary-color;
+                margin-right: 22px;
+                padding-right: 10px;
+                width: 49px;
+                min-width: 49px;
+            }
+        }
+     } 
+}
+.apply-main-section {
+    .simple-block {
+        padding: 40px 50px 46px 50px;
+        .offer {
+            font-size: 18px;
+            line-height: 18px;
+            margin: 19px 0 0;
+            display: inline-block;
+            a {
+                color: $black-text;
+                border-bottom: 1px solid $black-text;
+                font-weight: $bold;
+            }
+        }
+    }
+    .apply-today {
+        clip-path: polygon(0 0, 100% 12%, 100% 100%, 0% 100%);
+    }
+}
+.apply-main-section {
+    margin-top: 100px;
+}
+.situation-block {
+    margin-top: -190px;
+}
+.assistance-call {
+    margin-top: -100px;
+    p {
+        a {
+            color: $primary-text;
+            font-weight: $bold;
+        }
+    }
+}
+.slider-possible , .loans-slider , .excellent-slider{
+    .carousel__pagination {
+        margin: 60px 0 0;
+        padding: 0;
+    }
+    .carousel__pagination-item {
+        margin-right: 9px;
+        &:last-child {
+            margin-right: 0;
+        }
+        .carousel__pagination-button {
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            padding: 0;
+            border: none;
+            border-radius: 100%;
+            background-color: #79beee;
+            
+            &.carousel__pagination-button--active {
+                background-color: #3066be;
+            }
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+.loans-slider {
+    .carousel__pagination {
+        margin: 0;
+    }
+}
+
+.excellent-slider {
+    .carousel__pagination {
+        display: none;
+    }
+}
+@media (max-width:1499px) {
+    .discover {
+        .cost-content {
+            .item-content {
+                p {
+                    br {
+                        display: none;
+                    }
+                }
+            } 
+        } 
+    } 
+    .banner-content .personal-details p, .banner-content .personal-details h2 {
+        font-size: 53px;
+        line-height: 60px;
+        margin: 0 0 20px;
+    }
+    .services-main {
+        .quick-content {
+            h2 {
+                font-size: 26px;
+                line-height: 28px;
+            }
+        } 
+    } 
+    .benefit-section {
+        h2 {
+            font-size: 46px;
+            line-height: 46px;
+        }
+    } 
+    .discover {
+        padding: 65px 0 20px;
+    }
+    .services-main {
+        padding: 50px 0 0;
+    }
+    .apply-main-section {
+        margin-top: 60px;
+    }
+    .apply-main-section {
+        .apply-today {
+            -webkit-clip-path: polygon(0 0, 100% 6%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 6%, 100% 100%, 0% 100%);
+            height: 600px;
+        }
+    } 
+    .situation-block {
+        margin-top: -130px;
+    }
+    .apply-content {
+        ul {
+            margin: 20px 0 22px;
+            padding: 0;
+        }
+    } 
+}
+@media (max-width:1199px) {
+    .services-main {
+        padding: 30px 0 0;
+    }
+    .discover {
+        .cost-content {
+            .item-content {
+                h2 {
+                    font-size: 27px;
+                    line-height: 30px;
+                }
+            } 
+        } 
+    } 
+    .banner-content .personal-details p, .banner-content .personal-details h2 {
+        font-size: 42px;
+        line-height: 50px;
+        margin: 0 0 20px;
+    }
+    .benefit-section {
+        h2 {
+            font-size: 32px;
+            line-height: 46px;
+        }
+    } 
+    .situation-block {
+        margin-top: -60px;
+        padding: 80px 0 55px;
+    }
+    .page-banner {
+        .banner-content {
+            h1 {
+                font-size: 42px;
+                line-height: 55px;
+            }
+        }
+    } 
+  
+    .apply-main-section {
+        .simple-block {
+            padding: 20px 30px 26px 30px;
+            .offer {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    } 
+    .apply-content {
+        ul {
+            margin: 15px 0 20px;
+            // li {
+            //     font-size: 18px;
+            //     line-height: 22px;
+            //     br {
+            //         display: none;
+            //     }
+            //     span {
+            //         font-size: 75px;
+            //         line-height: 89px;
+            //     }
+            // }
+        }
+    } 
+}
+
+@media (max-width:991px) {
+    .page-banner-img {
+        height: 500px;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .your-content  {
+        padding: 0px 0 0;
+    }
+    .services-main {
+        padding: 30px 0 0;
+        p {
+            font-size: 24px;
+            line-height: 42px;
+        }
+        
+    } 
+    
+    .discover {
+        .title-details {
+            p {
+                font-size: 24px;
+                line-height: 46px;
+            }
+        } 
+    } 
+    .apply-main-section {
+        .apply-today {
+            height: 600px;
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    } 
+}
+
+@media (max-width:767px) {
+    .excellent-slider {
+        .carousel__pagination-item {
+            .carousel__pagination-button {
+                background-color: #fff;
+                
+                &.carousel__pagination-button--active {
+                    background-color: #3066BE;
+                }
+           
+            }
+        }
+        .carousel__pagination {
+            margin: 0;
+            position: relative;
+            top: 50px;
+            display: flex;
+        }
+    }
+    .situation-block {
+        &.assistance-call {
+            padding: 20px 0 30px;
+        }
+    }
+    .apply-content {
+        ul {
+            margin: 15px 0 20px;
+            li {
+                font-size: 18px;
+                line-height: 22px;
+                br {
+                    display: none;
+                }
+                span {
+                    font-size: 75px;
+                    line-height: 89px;
+                }
+            }
+        }
+    } 
+    .services-main {
+        .deserve-content {
+            clip-path: unset !important;
+        }
+        .solution-blocks {
+            padding: 0px;
+        }
+        .step-block {
+            img {
+                width: 56px;
+                height: 43px;
+            }
+        }
+        .quick-content {
+            h2 {
+                font-size: 20px;
+                line-height: 31px;
+                margin: 0;
+            }
+        } 
+        p {
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            margin: 9px 0 0;
+        }
+    } 
+    .page-banner {
+        .banner-content {
+            h1 {
+                font-size: 30px;
+                line-height: 35px;
+            }
+        }
+    } 
+    .banner-content .personal-details p, .banner-content .personal-details h2 {
+        font-size: 24px;
+        line-height: 30px;
+        margin: 0 0 20px;
+        font-weight: 600;
+    }
+    .situation-block {
+        padding: 53px 0 63px;
+    }
+    .benefit-section {
+        h2 {
+            font-size: 25px;
+            line-height: 30px;
+        }
+    } 
+    .discover {
+        padding: 36px 0 20px;
+        .started-btn {
+            margin-top: 33px;
+        }
+        .title-details p {
+            font-size: 18px;
+            line-height: 22px;
+            margin: 10px 0 54px;
+        }
+        .discover-slider {
+            padding: 0;
+        }
+        .cost-content {
+            margin: 0;
+            img {
+                height: 287px;
+                object-fit: cover;
+            }
+            .item-content {
+                p {
+                    font-size: 18px;
+                    line-height: 22px;
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .slick-dots {
+            top: -40px;
+            bottom: unset;
+        }
+        .slide-arrow {
+            top: 0;
+            &.next-arrow {
+                right: -10px;
+                
+            }
+            &.prev-arrow {
+                left: -10px;
+            }
+        } 
+    }
+    .apply-main-section {
+        margin-top: 20px;
+        .apply-today {
+            height: unset;
+        }
+    }
+    .apply-content {
+        .bottom-section {
+            padding-left: 0;
+            text-align: center;
+        }
+    } 
+    .slider-possible {
+        .carousel__pagination {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+        }
+    }
+}

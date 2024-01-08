@@ -1,0 +1,101 @@
+.career-banner {
+    .personal-details {
+        h2 {
+            font-size: 40px;
+            line-height: 45px;
+            margin: 25px 0 0;
+        }
+    }
+}
+
+.service-section {
+    padding: 175px 0 92px;
+    margin-top: -250px;
+    -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
+    h3 {
+        font-size: 35px;
+        line-height: 40px;
+        font-weight: $bold;
+        color: $primary-color;
+        margin: 56px 0 21px;
+    }
+    a {
+        font-size: 40px;
+        line-height: 45px;
+        font-weight: 600;
+        color: #3066BE;
+        border-bottom: 1px solid #3066BE;
+        display: inline-block;
+        margin: 11px 0 0;
+        &:hover {
+            color: $primary-color;
+            border-color: $primary-color;
+        }
+    }
+}
+.congratulations-banner {
+    .page-banner-img {
+        &::before {
+            width: 50%;
+        }
+    }
+}
+@media (max-width:1499px) {
+    .service-section {
+        margin-top: -170px;
+    }
+}
+@media (max-width:1199px) {
+    .service-section {
+        padding: 120px 0 92px;
+        margin-top: -120px;
+        -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+        h3 {
+            margin: 26px 0 21px;
+        }
+        a {
+            font-size: 30px;
+            line-height: 35px;
+        }
+    }
+}
+@media (max-width:991px) {
+    .congratulations-banner {
+        .page-banner-img {
+           &::before {
+            width: 100%;
+           }
+        }
+    }
+}
+@media (max-width:767px) {
+    .career-banner {
+        .personal-details {
+            h2 {
+                font-size: 24px;
+                line-height: 30px;
+                margin: 12px 0 0px;
+            }
+        } 
+    } 
+    .service-section {
+        padding: 54px 15px 70px;
+        -webkit-clip-path: polygon(0 0, 100% 4%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 4%, 100% 100%, 0% 100%);
+        h3 {
+            font-size: 22px;
+            line-height: 25px;
+        }
+        a {
+            font-size: 18px;
+            line-height: 25px;
+        }
+    } 
+    .congratulations-banner {
+        .page-banner-img {
+           height: unset;
+        }
+    }
+}

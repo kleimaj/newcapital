@@ -1,0 +1,385 @@
+.page-banner {
+    position: relative;
+    .page-banner-img {
+        text-align: right;
+        position: relative;
+        overflow: hidden;
+        .overlay-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            // width: 100%;
+        }
+        // &::before {
+        //     position: absolute;
+        //     content: '';
+        //     top: 0;
+        //     bottom: 0;
+        //     left: 0;
+        //     background-image: url(../images/overlay.png);
+        //     background-position: 100% 100%;
+        //     background-repeat: no-repeat;
+        //     width: auto;
+        //     height: 100%;
+        //     background-size: cover;
+        //     z-index: 0;
+        // }
+    }
+    .banner-content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 99;
+        h1 {
+            font-size: 75px;
+            line-height: 90px;
+            font-weight: $bold;
+            color: $primary-color;
+        }
+        p {
+            font-size: 30px;
+            line-height: 37px;
+            color: $primary-color;
+            margin: 34px 0px 50px 0;
+        }
+        span {
+            font-size: 18px;
+            line-height: 22px;
+            margin: 31px 0 0;
+            display: inline-block;
+            a {
+                color: $black-text;
+                border-bottom: 1px solid $black-text;
+                font-weight: $bold;
+            }
+        }
+    }
+}
+
+.benefit-section {
+    background-color: #D2F0FC;
+    clip-path: polygon(0 0, 100% 35%, 100% 100%, 0% 100%);
+    padding: 115px 0 74px;
+    margin-top: -230px;
+    h2 {
+        font-size: 56px;
+        line-height: 56px;
+        color: #3066BE;
+        font-weight: 600;
+    }
+    p {
+        font-size: 25px;
+        line-height: 32px;
+        margin: 18px 0 0;
+    }
+}
+
+.strives-section {
+   .page-banner-img {
+    text-align: left;
+    &::before {
+        display: none;
+    }
+   }
+}
+.work-together {
+    padding: 55px 0 0;
+    background-color: #2E0A46;
+    p {
+        font-size: 25px;
+        line-height: 32px;
+        margin: 18px 0 30px;
+    }
+   .work-details {
+        clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
+        .img-section {
+            clip-path: unset;
+            height: unset;
+        }
+        .see-rate {
+            display: inline-block;
+            margin-top: 50px;
+        }
+        .deserve-content {
+            top: 35%;
+        }
+   }
+}
+
+@media (max-width:1799px) {
+    .page-banner {
+        .banner-content {
+            h1 {
+                font-size: 60px;
+                line-height: 75px;
+            }
+        }
+    } 
+}
+@media (max-width:1499px) {
+    .page-banner {
+        .banner-content {
+            span {
+                margin: 10px 0 0;
+            }
+        } 
+    } 
+    .page-banner {
+        .banner-content {
+            p {
+                font-size: 28px;
+                line-height: 35px;
+                margin: 34px 0px 50px 0;
+            }
+        }
+        &::before {
+            opacity: 1;
+        }
+        .banner-content {
+            h1 {
+                font-size: 65px;
+                line-height: 70px;
+            }
+        } 
+    } 
+    .work-together {
+        .work-details {
+            .deserve-content {
+                top: 45%;
+            }
+        } 
+    } 
+}
+@media (max-width:1199px) {
+    .page-banner {
+        .page-banner-img {
+            width: 100%;
+            
+            &::before {
+                width: 100%;
+            }
+        }
+        .benefit-section {
+            h2 {
+                font-size: 32px;
+                line-height: 46px;
+            }
+        } 
+        .banner-content {
+            p {
+                font-size: 25px;
+                line-height: 29px;
+                margin: 34px 0px 30px 0;
+            }
+        }
+    }
+    .benefit-section {
+        margin-top: -180px;
+        padding: 100px 0 55px;
+        clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+        p {
+            font-size: 21px;
+            line-height: 30px;
+            margin: 10px 0 0;
+        }
+        h2 {
+            font-size: 46px;
+            line-height: 46px;
+        }
+    }
+    .work-together {
+        padding: 25px 0 0;
+        p {
+            font-size: 22px;
+            line-height: 28px;
+            margin: 18px 0 30px;
+        }
+        .work-details {
+            .deserv-section {
+                .financial-list {
+                    li {
+                        margin-bottom: 20px;
+                        padding-left: 50px;
+                        font-weight: 600;
+                    }
+                } 
+            }
+            .see-rate {
+                margin-top: 20px;
+            }
+            .deserve-content {
+                top: 50%;
+            }
+        }
+    } 
+    .strives-section {
+        .page-banner-img {
+            img {
+                width: 100%;
+            }
+            &::before {
+                display: block;
+            }
+        }
+    }
+   
+}
+@media (max-width:991px) {
+    .page-banner {
+        .banner-content {
+            h1 {
+                font-size: 40px;
+                line-height: 43px;
+            }
+            p {
+                font-size: 22px;
+                line-height: 26px;
+                margin: 15px 0px 25px 0;
+            }
+        }
+    }
+    .benefit-section {
+        margin-top: -150px;
+        h2 {
+            font-size: 38px;
+            line-height: 42px;
+        }
+        p {
+            font-size: 21px;
+            line-height: 28px;
+        }
+    }
+}
+@media (max-width:767px) {
+    .page-banner {
+        .page-banner-img {
+            .overlay-img {
+                width: 100%;
+            }
+        } 
+    } 
+    .page-banner {
+        display: flex;
+        flex-direction: column-reverse;
+        .your-content {
+            text-align: center;
+            padding: 20px 0 60px;
+        }
+        &::before {
+            display: none;
+        }
+        .banner-content {
+            position: relative;
+            top: unset;
+            transform: unset;
+            // text-align: center;
+            // padding: 0 10px 0;
+            h1 {
+                font-size: 30px;
+                line-height: 36px;
+            }
+            p {
+                margin: 15px 0px 25px 0;
+            }
+        }
+    }
+    .benefit-section {
+        padding: 50px 0 60px;
+        margin-top: -30px;
+        clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
+        h2 {
+            font-size: 25px;
+            line-height: 30px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 25px;
+        }
+    } 
+    .strives-section {
+        .page-banner-img {
+            &::before {
+                display: none;
+            }
+        }
+        
+        .financial-block {
+            padding: 36px 0px 46px;
+            &::after {
+                display: none;
+            }
+        }
+    }
+    .work-together {
+        p {
+            font-size: 18px;
+            line-height: 25px;
+            margin: 18px 0 30px;
+        }
+        .work-details {
+            -webkit-clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 100%);
+            .offer-peoples {
+                .offer-img {
+                    .deserve-content {
+                        clip-path: unset;
+                    }
+                } 
+            } 
+        }
+    } 
+    .page-banner {
+        .page-banner-img {
+            height: unset;
+        }
+        .banner-content {
+            .container {
+                max-width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin: 0 auto -20px;
+            }
+            span {
+                font-size: 16px;
+                a {
+                    color: $primary-color;
+                }
+            } 
+        }
+    }
+    .page-banner-img {
+        &::before {
+            display: none;
+        }
+       img {
+        width: 100%;
+       }
+    }
+    .repayment-section {
+        .container {
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: 0 auto -10px;
+            overflow: hidden;
+        }
+    }
+    .work-together {
+        .work-details {
+            .see-rate {
+                margin-top: 40px;
+                display: flex;
+                justify-content: center;
+            }
+        } 
+    }
+    .together-title {
+        margin-bottom: 80px;
+    }
+    .overlay-img {
+        display: none;
+    }
+}

@@ -1,0 +1,293 @@
+.great-news {
+    .news-content {
+        padding: 47px 0 81px;
+        text-align: center;
+        h1 {
+            font-size: 81px;
+            line-height: 90px;
+            font-weight: bold;
+            color: $dark-blue;
+            margin: 0 0 21px;
+            span {
+                color: $primary-color;
+            }
+        }
+        h2 {
+            font-size: 38px;
+            line-height: 48px;
+            color: $primary-text;
+            font-weight: normal;
+            margin: 21px 0 0;
+        }
+        .apply-card {
+            margin: 57px 0 76px;
+            padding: 35px 33px 55px;
+            box-shadow: 0px 3px 25px #00000029;
+            h3 {
+                font-size: 32px;
+                line-height: 38px;
+                text-align: left;
+                color: $primary-text;
+                font-weight: bold;
+                margin: 0 0 40px;
+            }
+            .offer-msg {
+                padding: 0;
+                margin: 0 0 46px;
+                a {
+                    color: #3066BE;
+                    border-bottom: 1px solid #3066BE;
+                }
+            }
+        }
+        h3 {
+            font-size: 55px;
+            line-height: 64px;
+            color: $primary-text;
+            font-weight: bold;
+            margin: 0 0 28px;
+            span {
+                color: $dark-blue;
+            }
+        }
+        p {
+            font-size: 25px;
+            line-height: 32px;
+        }
+    }
+}
+
+.deserv-section {
+    &.offer-peoples {
+        background-color: #e9f8ff;
+        .img-section {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+        }
+        .offer-img {
+            &::before {
+                display: none;
+            }
+            // .deserve-content {
+            //     margin-top: -50px;
+            // }
+        }
+        .financial-list {
+            margin: 33px 0 0;
+            li {
+                margin-bottom: 25px;
+                padding-left: 50px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &::before {
+                    font-weight: $bold;
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    width: 36px;
+                    height: 32px;
+                    color: $secondary-color;
+                    background-image: url('../images/like.svg');
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+}
+.customer-first {
+    .excellent  {
+        margin-top: 54px;
+    }
+}
+@media (max-width:1199px) {
+    .great-news {
+        .news-content {
+            h1 {
+                font-size: 61px;
+                line-height: 70px;
+            }
+            h2 {
+                font-size: 30px;
+                line-height: 32px;
+            }
+            h3 {
+                font-size: 45px;
+                line-height: 54px;
+            }
+            p {
+                font-size: 22px;
+                line-height: 32px;
+                br {
+                    display: none;
+                }
+            }
+            .apply-card {
+                margin: 45px 0 55px;
+                h3 {
+                    font-size: 26px;
+                    line-height: 31px;
+                    margin: 0 0 30px;
+                }
+            }
+        } 
+    }
+    .offer-peoples {
+        .offer-img {
+            .deserve-content {
+                margin-top: -25px;
+            }
+            // .img-section {
+            //     height: 520px;
+            // }
+        } 
+        .financial-list {
+            li {
+                margin-bottom: 15px;
+            }
+        } 
+    } 
+    
+    
+}
+@media (max-width:991px) {
+    .view-ratebtn {
+        width: 100% !important;
+    }
+    .great-news {
+        .news-content {
+            h1 {
+                font-size: 46px;
+                line-height: 46px;
+            }
+            h2 {
+                font-size: 26px;
+                line-height: 32px;
+            }
+            h3 {
+                font-size: 45px;
+                line-height: 54px;
+            }
+            p {
+                font-size: 22px;
+                line-height: 32px;
+                br {
+                    display: none;
+                }
+            }
+            .apply-card {
+                margin: 45px 0 55px;
+                h3 {
+                    font-size: 26px;
+                    line-height: 31px;
+                    margin: 0 0 30px;
+                }
+            }
+        } 
+    }
+    .offer-peoples {
+        .img-section {
+            img {
+                height: 600px;
+                object-fit: cover;
+            }
+        }
+    } 
+  
+    
+}
+@media (max-width:767px) {
+    .great-news {
+        .comman-btn {
+            &.view-ratebtn {
+                width: 100% !important;
+            }
+        } 
+        .news-content {
+            padding: 0px 0 55px;
+            .apply-card {
+                margin: 24px 0 55px;
+                padding: 25px 20px 55px;
+                h3 {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                .offer-msg {
+                    padding: 0;
+                    margin: 0 0 25px;
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+            h1 {
+                font-size: 27px;
+                line-height: 36px;
+                margin: 0;
+            }
+            h2 {
+                font-size: 20px;
+                line-height: 25px;
+            }
+            h3 {
+                font-size: 25px;
+                line-height: 32px;
+                br {
+                    display: none;
+                }
+            }
+            p {
+                font-size: 18px;
+                line-height: 25px;
+                br {
+                    display: none;
+                }
+            }
+            
+        } 
+    }
+    .offer-peoples {
+    .container {
+            max-width: 100%;
+        }
+        .img-section {
+            clip-path: none !important;  
+        }
+        .offer-img {
+            .deserve-content {
+                margin-top: 0;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+                .simple-block {
+                    padding: 34px 22px 47px 22px;
+                }
+            }
+        } 
+        .financial-list {
+            li {
+                margin-bottom: 15px;
+                font-size: 18px;
+                line-height: 25px;
+            }
+        } 
+    } 
+    .customer-first {
+        padding: 13px 0 130px;
+        .sub-title {
+            font-size: 31px;
+            line-height: 34px;
+            font-weight: $bold;
+        }
+        .excellent {
+            margin-top: 30px;
+        }
+    }
+    .deserv-section.offer-peoples {
+        .financial-list {
+            li {
+                &::before {
+                    width: 36px;
+                    height: 32px;
+                }
+            } 
+        } 
+    } 
+}
