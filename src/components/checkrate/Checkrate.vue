@@ -323,14 +323,13 @@ export default {
   }),
   computed: {
     offerCode() {
-      return this.offer_code;
+      return this.offer_code??"";
     }
   },
   watch: {
     offerCode() {
       if(this.offer_code != null && this.offer_code.length > 8 && this.offerCode.indexOf("@") === -1) {
-        // eslint-disable-next-line no-console
-        console.log(this.offer_code);
+
         axios.get(this.$store.state.rootDataURL + 'customer/mail/'+this.offer_code)
             .then((res) => {
               this.firstname = res.data.firstName;
@@ -452,6 +451,7 @@ export default {
   },
   methods: {
     validateForm() {
+
       this.submitted = true;
       if (
         this.firstname &&
@@ -462,7 +462,7 @@ export default {
         this.city &&
         this.zipcode &&
         this.address &&
-        this.totaldebt && this.loanamount
+        this.totaldebt && this.loanamount && (this.offer_code != null && this.offer_code.length > 8 && this.offer_code.indexOf("@") === -1)
       ) {
         this.formInfo.firstname = this.firstname;
         this.formInfo.address = this.address;
