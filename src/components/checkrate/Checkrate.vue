@@ -462,7 +462,7 @@ export default {
         this.city &&
         this.zipcode &&
         this.address &&
-        this.totaldebt && this.loanamount && (this.offer_code != null && this.offer_code.length > 8 && this.offer_code.indexOf("@") === -1)
+        this.totaldebt && this.loanamount && (this.offer_code.indexOf("@") === -1)
       ) {
         this.formInfo.firstname = this.firstname;
         this.formInfo.address = this.address;
