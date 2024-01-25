@@ -190,7 +190,7 @@ export default {
               this.toast.success("Form Submitted Successfully", {
                 timeout: 2000,
               });
-              router.push({ path: '/' })
+              router.push({ path: 'thankyou' })
             })
             .catch((error) => {
               // eslint-disable-next-line no-console

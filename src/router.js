@@ -28,6 +28,11 @@ const routes = [
     component: () => import('./components/congratulations/Congratulations.vue')
   },
   {
+    path: '/thankyou',
+    name: 'ThankYouComponent',
+    component: () => import('./components/thankyou/ThankYou.vue')
+  },
+  {
     path: '/contact',
     name: 'ContactComponent',
     component: () => import('./components/contact/Contact.vue')
