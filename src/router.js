@@ -47,6 +47,11 @@ const routes = [
     name: 'LandingComponent',
     component: () => import('./components/landing/Landing.vue')
   },
+  {
+    path: '/debt-calculator',
+    name: 'DebtCalculatorComponent',
+    component: () => import('./components/debtcalculator/DebtCalculator.vue')
+  },
   /*{
     path: '/mortgage',
     name: 'MortgageComponent',
