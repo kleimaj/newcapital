@@ -83,10 +83,10 @@
             <div class="container toggle-2-content bg-white text-lg-start mb-4">
             <div class="col-lg-12 col-md-12">
                 <div class="debt-section text-center">
-                    <div class="debt-question">
+                    <div class="debt-question d-flex flex-column align-items-md-center mb-md-4">
                     <h3 class="mb-md-4">Minimum Payment 
     Calculator</h3>
-                    <p>Trying to pay down a large credit card balance? Let us know how much you’d like to pay a month, or when you’d like to be debt-free, and we’ll help you come up with a monthly payment plan.</p>
+                    <p class="col-md-10">Trying to pay down a large credit card balance? Let us know how much you’d like to pay a month, or when you’d like to be debt-free, and we’ll help you come up with a monthly payment plan.</p>
                     </div>
                 </div>
                 <div class="d-block d-md-flex align-items-start">
@@ -242,7 +242,7 @@
             <div class="container toggle-3-content bg-white text-lg-start pb-4 px-md-5 ">
             <div class="col-lg-12 col-md-11">
                 <div class="debt-section text-center">
-                    <div class="debt-question">
+                    <div class="debt-question mb-md-3">
                     <h3 class="mb-md-4">Personal Loan
     Calculator</h3>
                     <p class="col-md-10 m-auto">This personal loan calculator will help
@@ -488,7 +488,7 @@
         this.fixedPayment = 15;
     },
     calcMinPayment() {
-        if ((this.minTotal === 0 || this.minTotal=== "") || (this.fixedPayment <= 0  || this.fixedPayment === "")) {
+        if ((this.minTotal <= 0 || this.minTotal > 100000 || this.minTotal === "") || (this.fixedPayment <= 0  || this.fixedPayment === "")) {
             this.resetMinPayment();
         }
         else {
@@ -544,7 +544,7 @@
     },
     calcPersonalLoan() {
         this.AmortItems = [];
-        if (this.loanAmount <= 0 || this.loanAmount === "" || this.loanInterest <= 0  || this.loanInterest === "" || this.loanTerm <= 0 || this.loanTerm === "") {
+        if (this.loanAmount <= 0 || this.loanAmount === "" || this.loanAmount > 100000 || this.loanInterest <= 0  || this.loanInterest === "" || this.loanTerm <= 0 || this.loanTerm === "") {
             this.resetPersonalLoan();
         }
         else {
@@ -581,41 +581,35 @@
                 this.toggleOneHidden = !this.toggleOneHidden
                 if (this.toggleOneHidden) {
                     document.querySelector('.toggle-1').src='assets/images/arrow-up.png';
-                    document.querySelector('.toggle-1-content').style="display: none;";
-                    document.querySelector('.toggle-1-hidden').style="display: block !important;";
                 }
                 else {
                     document.querySelector('.toggle-1').src='assets/images/arrow-down.png'
-                    document.querySelector('.toggle-1-content').style="";
-                    document.querySelector('.toggle-1-hidden').style="";
                 }
+                document.querySelector('.toggle-1-content').classList.toggle("d-none");
+                document.querySelector('.toggle-1-hidden').classList.toggle("d-none");
                 break;
                 case 2:
-                this.toggleOneHidden = !this.toggleOneHidden
-                if (this.toggleOneHidden) {
+                this.toggleTwoHidden = !this.toggleTwoHidden
+                if (this.toggleTwoHidden) {
                     document.querySelector('.toggle-2').src='assets/images/arrow-up.png';
-                    document.querySelector('.toggle-2-content').style="display: none;";
-                    document.querySelector('.toggle-2-hidden').style="display: block !important;";
                 }
                 else {
                     document.querySelector('.toggle-2').src='assets/images/arrow-down.png'
-                    document.querySelector('.toggle-2-content').style="";
-                    document.querySelector('.toggle-2-hidden').style="";
                 }
+                document.querySelector('.toggle-2-content').classList.toggle("d-none");
+                document.querySelector('.toggle-2-hidden').classList.toggle("d-none");
                 break;
 
                 case 3:
-                this.toggleOneHidden = !this.toggleOneHidden
-                if (this.toggleOneHidden) {
+                this.toggleThreeHidden = !this.toggleThreeHidden
+                if (this.toggleThreeHidden) {
                     document.querySelector('.toggle-3').src='assets/images/arrow-up.png';
-                    document.querySelector('.toggle-3-content').style="display: none;";
-                    document.querySelector('.toggle-3-hidden').style="display: block !important;";
                 }
                 else {
                     document.querySelector('.toggle-3').src='assets/images/arrow-down.png'
-                    document.querySelector('.toggle-3-content').style="";
-                    document.querySelector('.toggle-3-hidden').style="";
                 }
+                document.querySelector('.toggle-3-content').classList.toggle("d-none");
+                document.querySelector('.toggle-3-hidden').classList.toggle("d-none");
                 break;
         
             default:
