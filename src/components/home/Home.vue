@@ -167,7 +167,7 @@
                       <span v-if="msg.loanamount" class="error-msg">{{msg.loanamount}}</span>
                     </div>
                     <vue-turnstile site-key="0x4AAAAAAAIoEXeVt7ZTyzpT" v-model="token" />
-                    <!--<vue-turnstile site-key="1x00000000000000000000AA" v-model="token" />-->
+                    <!-- <vue-turnstile site-key="1x00000000000000000000AA" v-model="token" /> -->
 
                      <div
                        class="credit-block d-flex flex-lg-row flex-column align-items-center"
@@ -243,13 +243,13 @@ import DeserveSection from "../home/DeserveSection.vue";
 import { useToast } from "vue-toastification";
 import "@vueform/multiselect/themes/default.css";
 import axios from "axios";
-import VueTurnstile from 'vue-turnstile';
+// import VueTurnstile from 'vue-turnstile';
 import router from "@/router";
 
 export default {
   name: "HomeComponent",
   components: {
-    VueTurnstile,
+    // VueTurnstile,
     StepSection,
     AccomplishSection,
     NewCapitalSection,
@@ -269,7 +269,9 @@ export default {
       token: "",
       turnstile:"",
       loanamount: "",
-
+      utm_campaign: "",
+      utm_source: "",
+      utm_medium: "",
     },
 
     msg: [],
@@ -427,6 +429,9 @@ export default {
       if (this.formInfo.firstname && this.formInfo.lastname && this.formInfo.email && this.formInfo.phone && this.formInfo.loanamount ) {
 
         this.formInfo.token = this.token;
+        this.formInfo.utm_campaign = this.$route.query.utm_campaign;
+        this.formInfo.utm_source = this.$route.query.utm_source;
+        this.formInfo.utm_medium = this.$route.query.utm_medium;
 
 
         axios.post(this.$store.state.rootDataURL + 'customershort', this.formInfo)

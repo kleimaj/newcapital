@@ -1,0 +1,282 @@
+.schedule {
+    .table {
+        border-top: 1px solid #b1b7c5;
+        border-bottom: 1px solid #b1b7c5;
+        margin-bottom: 0;
+        p {
+            margin: 0;
+            margin: 10px;
+        }
+    }
+    .table-entry {
+        border-bottom: 1px solid #b1b7c5;
+        p {
+            margin: 10px;
+            margin-top: 5px;
+        }
+    }
+}
+.backdrop {
+    background-color: #D2F0FC;
+}
+.border-radius-card {
+    border-radius: 8px 8px 0 0;
+}
+.toggle-btn {
+    background-color: #2E0A46;
+    border: none;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    img {
+        margin: 10px;
+    }
+}
+.debt-question {
+    margin-top: 20px;
+    // margin-bottom: 50px;
+    h3 {
+        font-size: 35px;
+        line-height: 40px;
+        font-weight: $bold;
+        color: $primary-text;
+    }
+    p {
+        font-size: 25px;
+        line-height: 32px;
+        color: $primary-text;
+        margin: 0;
+    }
+    a {
+        font-size: 25px;
+        color: $primary-text;
+        text-decoration: underline;
+    }
+    // .form-control:focus + .form-label {
+        // color: #3066BE !important;
+    // }
+    .form-label {
+        background: #ffffff;
+        padding: 0 6px !important;
+        font-size: 12px !important;
+        top: 0 !important;
+        height: auto !important;
+        left: 13px !important;
+        -webkit-transform: translateY(-50%) scale(0.9) !important;
+        transform: translateY(-50%) scale(0.9) !important;
+        color: #3066BE;
+
+        &.percent {
+            left: 85% !important;
+            top: 24px !important;
+            font-size: 18px !important;
+        }
+    }
+    .form-control {
+        border: 1px solid #79BEEE !important;
+    }
+    .form-control::placeholder {
+        color: black !important;
+        opacity: .8;
+    }
+    .form-check {
+        margin-bottom: 10px;
+        input {
+            margin-top: 0 !important;
+            width: 21px;
+            height: 21px;
+        }
+        label {
+            height: auto !important;
+            padding: 0 10px !important;
+        }
+    }
+    .btn {
+        font-weight: bold;
+        font-size: 20px;
+        min-width: 200px;
+        &.blue {
+            background-color: #A6E1FA;
+            color: #2E0A46;
+        }
+        &.clear {
+            color: #3066BE;
+            border: 2px solid #3066BE;
+        }
+    }
+
+}
+.debt-section {
+    &.purple{
+        border: 2px solid #2E0A46;
+        .header {
+            background: #2E0A46;
+            color: white;
+        }
+        p {
+            color: #2E0A46
+        }
+    }
+    .link {
+        color: #0d6efd !important;
+    }
+    &.blue {
+        border: 2px solid #A6E1FA;
+        .header {
+            background: #A6E1FA;
+            color: black;
+        }
+        p {
+            color: black;
+        }
+    }
+    &.box {
+        border-radius: 8px;
+
+        text-align: center;
+        .header {
+            text-align: center;
+            font-size: 25px;
+            padding: 15px;
+            border-radius: 4px 4px 0 0;
+            font-weight: bold;
+
+        }
+        p {
+            padding: 0 15px;
+        }
+        .savings {
+            h5 {
+                font-size: 20px;
+                font-weight: bold;
+            }
+            h1 {
+                font-weight: bold;
+                font-size: 45px;
+                padding-bottom: 10px;
+            }
+            p {
+                padding: 0 15px;
+            }
+        }
+        .box-row {
+            // margin: 10px 20px;
+            border-bottom: 1px solid gray;
+            justify-content: space-between;
+            p {
+                white-space: nowrap;
+                margin-bottom: .5rem;
+                margin-top: 1rem;
+                padding: 0;
+                &.jumbo {
+                    font-size: 28px;
+                    padding: 5px 0;
+                }
+            }
+        }
+    }
+    &.box-result {
+        padding: 15px;
+    }
+    .custom-row {
+        strong {
+            color: #2E0A46;
+        }
+    }
+}
+.check-rate {
+    background-color: #FFFAE2;
+    img {
+        width: 100%;
+    }
+    h3 {
+        font-size: 25px;
+        padding: 10px;
+    }
+    .debt-question {
+        margin-bottom: 25px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+@media (max-width:1199px) {
+    .debt-block {
+        padding: 100px 0 30px;
+        margin-top: -130px;
+        margin-bottom: 0;
+        .debt-question {
+            h3 {
+                font-size: 32px;
+                line-height: 37px;
+            }
+            p {
+                font-size: 22px;
+                line-height: 28px;
+            }
+        } 
+    } 
+}
+@media (min-width:991px) {
+    .backdrop {
+        margin-top: 5vh;
+    }
+    .debt-question {
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        h3 {
+            font-size: 45px;
+        }
+        .loan-info {
+            font-size: 25px;
+        }
+        p {
+            font-size: 20px;
+        }
+        .form-label.percent {
+            left: 94% !important;
+            color: black !important;
+        }
+    }
+}
+@media (min-width:1200px) {
+    .backdrop {
+        margin-top: 15vh;
+    }
+}
+@media (min-width:1200px) {
+    .backdrop {
+        margin-top: 20vh;
+    }
+}
+@media (max-width:425px) {
+    .debt-block {
+        padding: 0 !important;
+    }
+}
+@media (max-width:767px) {
+    .backdrop {
+        margin-top: 5vh
+    }
+    .debt-block {
+        clip-path: unset;
+        padding: 33px 10px 0;
+        margin: 0 auto;
+        
+        .debt-question {
+            h3 {
+                font-size: 28px;
+                line-height: normal;
+            }
+            p {
+                font-size: 18px;
+                line-height: 25px;
+            }
+            a {
+                font-size: 18px;
+                color: $primary-text;
+                text-decoration: underline;
+            }
+        } 
+    }
+}
