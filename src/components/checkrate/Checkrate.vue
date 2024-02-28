@@ -176,6 +176,7 @@
 
                 <div class="request-block">
 
+                    <!-- <vue-turnstile site-key="1x00000000000000000000AA" v-model="token" /> -->
                   <vue-turnstile site-key="0x4AAAAAAAIoEXeVt7ZTyzpT" v-model="token" />
                   <div class="d-flex justify-content-center align-items-end submit-btn">
                     <button
@@ -249,6 +250,9 @@ export default {
           loanamount: "",
           phone: "",
           state: "",
+          utm_campaign: "",
+          utm_source: "",
+          utm_medium: "",
     },
 
     offer_code:'',
@@ -478,7 +482,10 @@ export default {
         this.formInfo.offer = this.offer_code;
         this.formInfo.token = this.token;
         this.formInfo.loanamount = this.loanamount;
-
+        this.formInfo.utm_campaign = this.$route.query.utm_campaign;
+        this.formInfo.utm_source = this.$route.query.utm_source;
+        this.formInfo.utm_medium = this.$route.query.utm_medium;
+        
         axios.post(this.$store.state.rootDataURL + 'customer', this.formInfo)
             .then((res) => {
               //Perform Success Action
