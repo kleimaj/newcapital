@@ -166,7 +166,7 @@
                     </div>
                       <span v-if="msg.loanamount" class="error-msg">{{msg.loanamount}}</span>
                     </div>
-                    <!-- <vue-turnstile site-key="0x4AAAAAAAIoEXeVt7ZTyzpT" v-model="token" /> -->
+                    <vue-turnstile site-key="0x4AAAAAAAIoEXeVt7ZTyzpT" v-model="token" />
                     <!--<vue-turnstile site-key="1x00000000000000000000AA" v-model="token" />-->
 
                      <div

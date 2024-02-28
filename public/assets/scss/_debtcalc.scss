@@ -1,3 +1,21 @@
+.schedule {
+    .table {
+        border-top: 1px solid #b1b7c5;
+        border-bottom: 1px solid #b1b7c5;
+        margin-bottom: 0;
+        p {
+            margin: 0;
+            margin: 10px;
+        }
+    }
+    .table-entry {
+        border-bottom: 1px solid #b1b7c5;
+        p {
+            margin: 10px;
+            margin-top: 5px;
+        }
+    }
+}
 .backdrop {
     background-color: #D2F0FC;
 }
@@ -97,6 +115,9 @@
         p {
             color: #2E0A46
         }
+    }
+    .link {
+        color: #0d6efd !important;
     }
     &.blue {
         border: 2px solid #A6E1FA;

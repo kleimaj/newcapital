@@ -4042,6 +4042,26 @@ footer .f-bottom p:last-child {
   }
 }
 
+.schedule .table {
+  border-top: 1px solid #b1b7c5;
+  border-bottom: 1px solid #b1b7c5;
+  margin-bottom: 0;
+}
+
+.schedule .table p {
+  margin: 0;
+  margin: 10px;
+}
+
+.schedule .table-entry {
+  border-bottom: 1px solid #b1b7c5;
+}
+
+.schedule .table-entry p {
+  margin: 10px;
+  margin-top: 5px;
+}
+
 .backdrop {
   background-color: #D2F0FC;
 }
@@ -4169,6 +4189,10 @@ footer .f-bottom p:last-child {
 
 .debt-section.purple p {
   color: #2E0A46;
+}
+
+.debt-section .link {
+  color: #0d6efd !important;
 }
 
 .debt-section.blue {

@@ -15,6 +15,7 @@
           <li><router-link @click="show_header = false" to="/about" >About Us</router-link></li>
           <li><router-link @click="show_header = false" to="/personal">Personal Loans</router-link></li>
          <!-- <li><router-link @click="show_header = false" to="/mortgage">Mortgage Loan</router-link></li>-->
+         <li><router-link @click="show_header = false" to="/debt-calculator">Debt Calculator</router-link></li>
           <li><router-link @click="show_header = false" to="/checkrate">Check My Rate</router-link></li>
           <li><router-link @click="show_header = false" to="/faq">FAQs</router-link></li>
           <li><router-link @click="show_header = false" to="/contact">Contact Us</router-link></li>
