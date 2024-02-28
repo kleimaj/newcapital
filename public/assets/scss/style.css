@@ -4085,6 +4085,19 @@ footer .f-bottom p:last-child {
   margin-top: 20px;
 }
 
+.debt-question input::-webkit-outer-spin-button,
+.debt-question input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.debt-question input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
 .debt-question h3 {
   font-size: 35px;
   line-height: 40px;

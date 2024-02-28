@@ -15,7 +15,7 @@
                     <p class="col-md-10"><strong>Consolidate multiple debts into one manageable monthly payment.</strong> Credit card debt can  
     feel overwhelming, but there is a  way out. Switch to a personal loan  for a smarter, faster route to ﬁnancial freedom. Ready to compare and see the difference for yourself? Just ﬁll in your total unsecured debt below to estimate your savings with  New Capital Financial.</p>
     <br/>
-    <a href="#">How it works.</a>
+    <a class="d-none" href="#">How it works.</a>
                 </div>
                 </div>
                 <div class="debt-section custom-form d-block d-md-flex align-items-end justify-content-between">
@@ -23,7 +23,7 @@
                         <p><strong>Total Unsecured Debt</strong></p>
                         <br/>
                         <div class="error-message">
-                        <input class="form-control" placeholder="$0" v-model="totalDebt" type="text" pattern="\d*"/>
+                        <input class="form-control" placeholder="$0" v-model="totalDebt" type="number" />
                         <label class="form-label">Total</label>
                         </div>
                     </div>
@@ -54,10 +54,10 @@
                         <p>Total Interest Paid: <strong>${{ parseFloat(consolidationTotalInterest).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</strong></p> 
                         <p>Interest Rate: <strong>6.95%</strong></p>
                         <p>Monthly Payment: <strong>${{ parseFloat(consolidationMonthly).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</strong></p>
-                        <p>Total Cost: <strong>${{ consolidationTotalCost.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</strong></p>
+                        <p>Total Savings: <strong>${{ consolidationSavings.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</strong></p>
                         <div class="savings">
-                            <h5>Total Savings:</h5>
-                            <h1>${{ consolidationSavings.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</h1>
+                            <h5>Total Cost:</h5>
+                            <h1>${{ consolidationTotalCost.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</h1>
                             <p class="col-md-6 m-auto mb-4">Payoff numbers are calculated based on the national average</p>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                             <p><strong>What is your credit card balance?</strong></p>
                             <br/>
                             <div class="error-message">
-                            <input class="form-control" @change="minPaymentChange()" min="0" type="number" v-model="minTotal"/>
+                            <input class="form-control" @change="minPaymentChange()" min="0" type="number" placeholder="$0" v-model="minTotal"/>
                             <label class="form-label">Total</label>
                             </div>
                         </div>
@@ -398,7 +398,7 @@
 
         // Calc 3 States
         AmortItems: [],
-        loanAmount: 10000,
+        loanAmount: "",
         loanTerm: 5,
         loanInterest: 5.95,
         loanMonthly: 0.00,
@@ -539,7 +539,7 @@
     resetPersonalLoan() {
         this.AmortItems = [];
         this.loanTotalInterest = 0;
-        this.loanAmount= 0;
+        this.loanAmount = "";
         this.loanMonthly= 0.00;
     },
     calcPersonalLoan() {

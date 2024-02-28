@@ -243,13 +243,13 @@ import DeserveSection from "../home/DeserveSection.vue";
 import { useToast } from "vue-toastification";
 import "@vueform/multiselect/themes/default.css";
 import axios from "axios";
-// import VueTurnstile from 'vue-turnstile';
+import VueTurnstile from 'vue-turnstile';
 import router from "@/router";
 
 export default {
   name: "HomeComponent",
   components: {
-    // VueTurnstile,
+    VueTurnstile,
     StepSection,
     AccomplishSection,
     NewCapitalSection,
