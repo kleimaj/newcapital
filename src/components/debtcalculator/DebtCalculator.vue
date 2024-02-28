@@ -23,7 +23,7 @@
                         <p><strong>Total Unsecured Debt</strong></p>
                         <br/>
                         <div class="error-message">
-                        <input class="form-control" placeholder="$0" v-model="totalDebt" type="text" pattern="\d*"/>
+                        <input class="form-control" placeholder="$0" v-model="totalDebt" type="number" />
                         <label class="form-label">Total</label>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                             <p><strong>What is your credit card balance?</strong></p>
                             <br/>
                             <div class="error-message">
-                            <input class="form-control" @change="minPaymentChange()" min="0" type="number" v-model="minTotal"/>
+                            <input class="form-control" @change="minPaymentChange()" min="0" type="number" placeholder="$0" v-model="minTotal"/>
                             <label class="form-label">Total</label>
                             </div>
                         </div>
@@ -398,7 +398,7 @@
 
         // Calc 3 States
         AmortItems: [],
-        loanAmount: 10000,
+        loanAmount: "",
         loanTerm: 5,
         loanInterest: 5.95,
         loanMonthly: 0.00,
@@ -539,7 +539,7 @@
     resetPersonalLoan() {
         this.AmortItems = [];
         this.loanTotalInterest = 0;
-        this.loanAmount= 0;
+        this.loanAmount = "";
         this.loanMonthly= 0.00;
     },
     calcPersonalLoan() {
