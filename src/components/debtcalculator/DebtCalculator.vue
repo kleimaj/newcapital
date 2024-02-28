@@ -15,7 +15,7 @@
                     <p class="col-md-10"><strong>Consolidate multiple debts into one manageable monthly payment.</strong> Credit card debt can  
     feel overwhelming, but there is a  way out. Switch to a personal loan  for a smarter, faster route to ﬁnancial freedom. Ready to compare and see the difference for yourself? Just ﬁll in your total unsecured debt below to estimate your savings with  New Capital Financial.</p>
     <br/>
-    <a href="#">How it works.</a>
+    <a class="d-none" href="#">How it works.</a>
                 </div>
                 </div>
                 <div class="debt-section custom-form d-block d-md-flex align-items-end justify-content-between">
@@ -54,10 +54,10 @@
                         <p>Total Interest Paid: <strong>${{ parseFloat(consolidationTotalInterest).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</strong></p> 
                         <p>Interest Rate: <strong>6.95%</strong></p>
                         <p>Monthly Payment: <strong>${{ parseFloat(consolidationMonthly).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</strong></p>
-                        <p>Total Cost: <strong>${{ consolidationTotalCost.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</strong></p>
+                        <p>Total Savings: <strong>${{ consolidationSavings.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</strong></p>
                         <div class="savings">
-                            <h5>Total Savings:</h5>
-                            <h1>${{ consolidationSavings.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</h1>
+                            <h5>Total Cost:</h5>
+                            <h1>${{ consolidationTotalCost.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</h1>
                             <p class="col-md-6 m-auto mb-4">Payoff numbers are calculated based on the national average</p>
                         </div>
                     </div>
