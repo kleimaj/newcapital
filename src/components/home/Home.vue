@@ -166,8 +166,8 @@
                     </div>
                       <span v-if="msg.loanamount" class="error-msg">{{msg.loanamount}}</span>
                     </div>
-                    <vue-turnstile site-key="0x4AAAAAAAIoEXeVt7ZTyzpT" v-model="token" />
-                    <!-- <vue-turnstile site-key="1x00000000000000000000AA" v-model="token" /> -->
+                    <!-- <vue-turnstile site-key="0x4AAAAAAAIoEXeVt7ZTyzpT" v-model="token" /> -->
+                    <vue-turnstile site-key="1x00000000000000000000AA" v-model="token" />
 
                      <div
                        class="credit-block d-flex flex-lg-row flex-column align-items-center"
@@ -222,6 +222,7 @@
   <!-- Section 5 newcapital and carusal images -->
   <NewCapitalSection msg="New Capital Section" />
   <!-- Section: 5 End -->
+  <DebtCalc />
 
   <!-- Section:6 deserve section and check my rate -->
   <DeserveSection msg="Deserve Section" />
@@ -239,6 +240,7 @@ import StepSection from "../home/StepSection.vue";
 import AccomplishSection from "../home/AccomplishSection.vue";
 import NewCapitalSection from "../home/NewCapitalSection.vue";
 import DeserveSection from "../home/DeserveSection.vue";
+import DebtCalc from "./DebtCalc.vue";
 //import Multiselect from "@vueform/multiselect";
 import { useToast } from "vue-toastification";
 import "@vueform/multiselect/themes/default.css";
@@ -254,6 +256,7 @@ export default {
     AccomplishSection,
     NewCapitalSection,
     DeserveSection,
+    DebtCalc,
    // Multiselect,
   },
   data: () => ({

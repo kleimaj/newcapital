@@ -8,11 +8,11 @@
             <div class="col-lg-12 col-md-12">
                 <div class="debt-section text-center">
                 <div class="debt-question mb-4 d-flex flex-column align-items-md-center">
-                    <h3 class="col-md-6 mb-4 lh-sm">Eliminate Credit
+                    <h3 class="col-md-7 mb-4 lh-sm">Eliminate Credit
                         Card Debt and
                         Save With a
                         Personal Loan</h3>
-                    <p class="col-md-10"><strong>Consolidate multiple debts into one manageable monthly payment.</strong> Credit card debt can  
+                    <p class="col-md-11"><strong>Consolidate multiple debts into one manageable monthly payment.</strong> Credit card debt can  
     feel overwhelming, but there is a  way out. Switch to a personal loan  for a smarter, faster route to ﬁnancial freedom. Ready to compare and see the difference for yourself? Just ﬁll in your total unsecured debt below to estimate your savings with  New Capital Financial.</p>
     <br/>
     <a class="d-none" href="#">How it works.</a>
@@ -23,9 +23,21 @@
                         <p><strong>Total Unsecured Debt</strong></p>
                         <br/>
                         <div class="error-message">
-                        <input class="form-control" placeholder="$0" v-model="totalDebt" type="number" />
+                        <CurrencyInput :options="{ currency: 'USD',       
+                            hideCurrencySymbolOnFocus: false,
+                            hideGroupingSeparatorOnFocus: false,
+                            hideNegligibleDecimalDigitsOnFocus: false,
+                            valueRange: {min: 0, max: 100000}}" class="form-control" placeholder="$0" ref="inputRef" @keyup="autoCalculate($event)" v-model="totalDebt" type="text" />
                         <label class="form-label">Total</label>
                         </div>
+                        <!-- <div class="debt-question custom-row mb-md-0">
+                        <p><strong>Payoff Loan Term (yrs)</strong></p>
+                        <br/>
+                        <div class="error-message">
+                        <input class="form-control" placeholder="$0" v-model="payOffTerm" @change="updateAllLoanTerms()" type="number" />
+                        <label class="form-label">Years</label>
+                        </div> -->
+                    <!-- </div> -->
                     </div>
                     <div class="debt-question mb-0 col-md-6">
                         <div class="button-group d-flex flex-column flex-md-row d-md-flex align-items-center justify-content-evenly">
@@ -58,7 +70,7 @@
                         <div class="savings">
                             <h5>Total Cost:</h5>
                             <h1>${{ consolidationTotalCost.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</h1>
-                            <p class="col-md-6 m-auto mb-4">Payoff numbers are calculated based on the national average</p>
+                            <p class="col-md-6 m-auto mb-4 d-none">Payoff numbers are calculated based on the national average</p>
                         </div>
                     </div>
                 </div>
@@ -95,7 +107,11 @@
                             <p><strong>What is your credit card balance?</strong></p>
                             <br/>
                             <div class="error-message">
-                            <input class="form-control" @change="minPaymentChange()" min="0" type="number" placeholder="$0" v-model="minTotal"/>
+                            <CurrencyInput :options="{ currency: 'USD',       
+                            hideCurrencySymbolOnFocus: false,
+                            hideGroupingSeparatorOnFocus: false,
+                            hideNegligibleDecimalDigitsOnFocus: false,
+                            valueRange: {min: 0, max: 100000}}" class="form-control" ref="inputRef2" @change="minPaymentChange()" type="text" @keyup="autoCalculateMin($event)" placeholder="$0" v-model="minTotal"/>
                             <label class="form-label">Total</label>
                             </div>
                         </div>
@@ -160,7 +176,7 @@
                             </select>
                         </div>
                         <div class="debt-question custom-row">
-                            <p class="text-black">Your minimum payment: <strong>${{ minPayment }}</strong></p>
+                            <p class="text-black">Your minimum payment: <strong>${{ minPayment.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</strong></p>
                             <p class="text-black mt-4"><strong>Select a payment schedule based on:</strong></p>
                             <br/>
                             <div class="form-check">
@@ -263,12 +279,17 @@
                             <p><strong>Loan amount</strong></p>
                             <br/>
                             <div class="error-message">
-                            <input class="form-control" placeholder="$0" type="number" min="0" v-model="loanAmount"/>
+                            <CurrencyInput :options="{ currency: 'USD',       
+                            hideCurrencySymbolOnFocus: false,
+                            hideGroupingSeparatorOnFocus: false,
+                            hideNegligibleDecimalDigitsOnFocus: false,
+                            valueRange: {min: 0, max: 100000}}"
+                             class="form-control" placeholder="$0" @keyup="autoCalculatePersonal($event)" v-model="loanAmount"/>
                             <label class="form-label">Amount</label>
                             </div>
                         </div>
                         <div class="debt-question custom-row">
-                            <p><strong>Loan term (yrs)</strong></p>
+                            <p><strong>Loan term (yrs)</strong> Terms can be from 3-12 years</p>
                             <br/>
                             <input class="form-control" type="number" min="1" v-model="loanTerm"/>
                         </div>
@@ -287,7 +308,7 @@
                     </div>
                     <div class="debt-section box box-result blue pb-4 mb-4 text-start col-md-6 ms-md-4 align-self-start px-md-4 mt-md-5">
                         <h3 class="pt-2 mt-4 ps-3"><strong>Your results:</strong></h3>
-                        <div class="box-row d-flex"><p>Total prinicipal paid</p> <p><strong>${{ loanAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</strong></p></div>
+                        <div class="box-row d-flex"><p>Total prinicipal paid</p> <p><strong>${{ loanAmount ? loanAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : "0" }}</strong></p></div>
                         <div class="box-row d-flex"><p>Total interest paid</p> <p><strong>${{ loanTotalInterest.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</strong></p></div>
                         <div class="box-row d-flex"><p><strong>Estimated payment</strong></p> <p class="jumbo"><strong>${{ loanMonthly.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }}</strong></p></div>
                         <div class="box-row d-flex"><p><strong>Loan term (yrs)</strong></p> <p class="jumbo"><strong>{{ loanTerm }}</strong></p></div>
@@ -358,14 +379,25 @@
   import MinPaySchedule from './MinPaySchedule.vue';
   import AmortSchedule from './AmortSchedule.vue';
   import router from '@/router';
+//   import { useCurrencyInput } from 'vue-currency-input'
+  import CurrencyInput from "./CurrencyInput.vue";
+
   export default {
     name: 'DebtCalculatorComponent',
     components: {
         MinPaySchedule,
-        AmortSchedule
+        AmortSchedule,
+        CurrencyInput,
     },
     props: {
-      msg: String
+      msg: String,
+    },
+    setup() {
+        // const { inputRef } = useCurrencyInput({currency: "USD"});
+        // const { inputRef2 } = useCurrencyInput({currency: "USD"});
+        // const { inputRef3 } = useCurrencyInput({currency: "USD"});
+
+        // return { inputRef, inputRef2, inputRef3 }
     },
     data: () => ({
         // Toggle States
@@ -381,6 +413,7 @@
         payOffTotalInterest: 0,
         payOffMonthly: 0,
         payOffTotalCost: 0,
+        // payOffTerm: 30,
         consolidationTotalInterest: 0,
         consolidationMonthly: 0,
         consolidationTotalCost: 0,
@@ -391,7 +424,7 @@
         minInterest : 0.00,
         minMonths: 0,
         minTotal: "",
-        minInterestRate: ".18",
+        minInterestRate: ".22",
         minCalculated: ".01",
         minPayment: 15,
         fixedPayment: 15,
@@ -400,7 +433,7 @@
         AmortItems: [],
         loanAmount: "",
         loanTerm: 5,
-        loanInterest: 5.95,
+        loanInterest: 6.95,
         loanMonthly: 0.00,
         loanTotalInterest: 0.00,
     }),
@@ -415,6 +448,37 @@
   },
 
   methods: {
+    autoCalculate(event) {
+        // this.minTotal = this.totalDebt;
+        // this.loanAmount = this.totalDebt;
+                                // eslint-disable-next-line no-console
+                                // console.log(event, event.target.value);
+        if (event.target.value !== "") {
+            this.updateAllLoanAmount();
+            this.calcMinPayment();
+            this.calcPayOff();
+            this.calcPersonalLoan();
+        }
+
+    },
+    autoCalculateMin(event) {
+        if (event.target.value !== "")
+        this.calcMinPayment();
+    },
+    autoCalculatePersonal(event) {
+        if (event.target.value !== "" || event.target.value !== null) 
+        this.calcPersonalLoan();
+    },
+    updateAllLoanAmount(){
+        this.minTotal = this.totalDebt;
+        this.loanAmount = this.totalDebt;
+                        // eslint-disable-next-line no-console
+        console.log(this.minTotal, this.loanAmount);
+        // this.calcPayOff();
+    },
+    // updateAllLoanTerms() {
+    //     this.loanTerm = this.payOffTerm;
+    // },
     redirectToCheckRate() {
         router.push({ path: 'checkrate'});
     },
@@ -446,14 +510,15 @@
         this.consolidationSavings = 0;
     },
     calcPayOff() {
-        if (this.totalDebt <= 0) {
-            this.resetPayOff();
+        if (this.totalDebt <= 0 && this.totalDebt < 100000) {
+            // this.resetPayOff();
         }
         else {
             var r1 = (.22)/12;
             var r2 = (.0695)/12;
-            var n1 = 30*12;
+            var n1 = 30 * 12;
             var n2 = 5*12;
+
             this.payOffMonthly = (parseFloat(this.totalDebt) * r1 * Math.pow(1+r1,n1)) / (Math.pow(1+r1,n1)-1);
             this.consolidationMonthly = (parseFloat(this.totalDebt) * r2 * Math.pow(1+r2,n2)) / (Math.pow(1+r2,n2)-1);
             this.payOffTotalInterest = this.payOffMonthly * n1 - parseFloat(this.totalDebt);
@@ -489,7 +554,7 @@
     },
     calcMinPayment() {
         if ((this.minTotal <= 0 || this.minTotal > 100000 || this.minTotal === "") || (this.fixedPayment <= 0  || this.fixedPayment === "")) {
-            this.resetMinPayment();
+            // this.resetMinPayment();
         }
         else {
             this.MinPayItems = [];
@@ -544,8 +609,8 @@
     },
     calcPersonalLoan() {
         this.AmortItems = [];
-        if (this.loanAmount <= 0 || this.loanAmount === "" || this.loanAmount > 100000 || this.loanInterest <= 0  || this.loanInterest === "" || this.loanTerm <= 0 || this.loanTerm === "") {
-            this.resetPersonalLoan();
+        if (this.loanAmount <= 0 || this.loanAmount === "" || this.loanAmount > 100000 || this.loanInterest <= 0  || this.loanInterest === "" || this.loanTerm < 3 || this.loanTerm > 12 || this.loanTerm === "") {
+            // this.resetPersonalLoan();
         }
         else {
             var r = (this.loanInterest * .01)/12;
