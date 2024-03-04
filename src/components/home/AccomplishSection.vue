@@ -2,57 +2,57 @@
     <section class="accomplish">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-xl-9 col-lg-11 col-md-12">
+                <div class="col-xl-9 col-lg-11 col-md-12 m-4">
                     <div class="accomplish-detail text-center">
-                        <h2 class="title m-0">What would you like to accomplish?</h2>
+                        <h2 class="title m-0 mt-4">What would you like to accomplish?</h2>
                         <p>New Capital Financial <br class="d-md-none d-block"> loans can be used for:</p>
                     </div>
                     <div class="row d-md-flex d-none">
                         <div class="col-md-4">
                             <div class="accomplish-block">
-                                <div class="inner-block">
-                                    <img src="assets/images/consolidation.jpg" alt="consolidation" class="img-fluid" />
-                                </div>
+                                <!-- <div class="inner-block"> -->
+                                    <img src="assets/images/icons/debt-consolidation.png" width="93" alt="consolidation"/>
+                                <!-- </div> -->
                                 <h2>Debt Consolidation</h2>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="accomplish-block">
-                                <div class="inner-block">
-                                    <img src="assets/images/improvements.jpg" alt="improvements" class="img-fluid" />
-                                </div>
+                                <!-- <div class="inner-block"> -->
+                                    <img src="assets/images/icons/home-improvement.png" alt="improvements" />
+                                <!-- </div> -->
                                 <h2>Home Improvements</h2>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="accomplish-block">
-                                <div class="inner-block">
-                                    <img src="assets/images/care.jpg" alt="care" class="img-fluid" />
-                                </div>
+                                <!-- <div class="inner-block"> -->
+                                    <img src="assets/images/icons/medical-care.png" alt="care"/>
+                                <!-- </div> -->
                                 <h2>Medical Care</h2>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="accomplish-block">
-                                <div class="inner-block">
-                                    <img src="assets/images/cost.jpg" alt="cost" class="img-fluid" />
-                                </div>
+                                <!-- <div class="inner-block"> -->
+                                    <img src="assets/images/icons/moving-costs.png" alt="cost"/>
+                                <!-- </div> -->
                                 <h2>Moving Costs</h2>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="accomplish-block">
-                                <div class="inner-block">
-                                    <img src="assets/images/purchases.jpg" alt="purchases" class="img-fluid" />
-                                </div>
+                                <!-- <div class="inner-block"> -->
+                                    <img src="assets/images/icons/major-purchases.png" alt="purchases"/>
+                                <!-- </div> -->
                                 <h2>Major Purchases</h2>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="accomplish-block">
-                                <div class="inner-block">
-                                    <img src="assets/images/travel.jpg" alt="travel" class="img-fluid" />
-                                </div>
+                                <!-- <div class="inner-block"> -->
+                                    <img src="assets/images/icons/travel.png" alt="travel"/>
+                                <!-- </div> -->
                                 <h2>Travel</h2>
                             </div>
                         </div>
@@ -63,10 +63,11 @@
                                 <div class="carousel__item">
                                     <div class="loan-item">
                                         <div class="accomplish-block">
-                                            <h2>{{ slide.title }}</h2>
-                                            <div class="inner-block">
-                                                <img :src="slide.imageUrl" :alt="slide.imageAlt" class="img-fluid" />
-                                            </div>
+                                            <!-- <div class="inner-block"> -->
+                                                <img :src="slide.imageUrl" :alt="slide.imageAlt"  />
+                                            <!-- </div> -->
+                                            <h2 class="mt-4">{{ slide.title }}</h2>
+
                                         </div>
                                     </div>
                                 </div>
@@ -96,12 +97,12 @@ export default {
   },
   data: () => ({
     slides: [
-      { id: '1', title: 'Debt consolidation', imageUrl: 'assets/images/consolidation.jpg', imageAlt: 'consolidation' },
-      { id: '2', title: 'Home improvements', imageUrl: 'assets/images/improvements.jpg', imageAlt: 'improvements' },
-      { id: '3', title: 'Medical care', imageUrl: 'assets/images/cost.jpg', imageAlt: 'cost' },
-      { id: '4', title: 'Major purchases', imageUrl: 'assets/images/purchases.jpg', imageAlt: 'purchases' },
-      { id: '5', title: 'Travel', imageUrl: 'assets/images/travel.jpg', imageAlt: 'travel' },
-      { id: '6', title: 'Debt consolidation', imageUrl: 'assets/images/consolidation.jpg', imageAlt: 'consolidation' },
+      { id: '1', title: 'Debt consolidation', imageUrl: 'assets/images/icons/debt-consolidation.png', imageAlt: 'consolidation' },
+      { id: '2', title: 'Home improvements', imageUrl: 'assets/images/icons/home-improvement.png', imageAlt: 'improvements' },
+      { id: '3', title: 'Medical care', imageUrl: 'assets/images/icons/medical-care.png', imageAlt: 'cost' },
+      { id: '4', title: 'Major purchases', imageUrl: 'assets/images/icons/major-purchases.png', imageAlt: 'purchases' },
+      { id: '5', title: 'Travel', imageUrl: 'assets/images/icons/travel.png', imageAlt: 'travel' },
+      { id: '6', title: 'Moving Costs', imageUrl: 'assets/images/icons/moving-costs.png', imageAlt: 'moving-costs' },
     ],
     // carousel settings
     settings: {
