@@ -1307,6 +1307,18 @@ header .phone-btn:hover img {
 
 .accomplish {
   padding: 0 0 25px;
+  background-color: #E9F8FE;
+}
+
+.accomplish .accomplish-detail h2 {
+  color: #3066BE;
+  font-size: 40px;
+}
+
+@media (max-width: 767px) {
+  .accomplish .accomplish-detail h2 {
+    font-size: 22px;
+  }
 }
 
 .accomplish .accomplish-detail p {
@@ -1318,6 +1330,7 @@ header .phone-btn:hover img {
 
 .accomplish .accomplish-block {
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .accomplish .accomplish-block .inner-block {
@@ -1342,6 +1355,8 @@ header .phone-btn:hover img {
      object-fit: cover;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
+  width: auto;
+  max-width: 93px;
 }
 
 .accomplish .accomplish-block h2 {

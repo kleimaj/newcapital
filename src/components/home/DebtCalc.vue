@@ -23,11 +23,11 @@
                         <p><strong>Total Unsecured Debt</strong></p>
                         <br/>
                         <div class="error-message">
-                        <CurrencyInput :options="{ currency: 'USD',       
+                        <CurrencyInput :options="{ currency: 'USD',
                             hideCurrencySymbolOnFocus: false,
                             hideGroupingSeparatorOnFocus: false,
                             hideNegligibleDecimalDigitsOnFocus: false,
-                            valueRange: {min: 0, max: 100000}}" class="form-control" placeholder="$0" ref="inputRef" @keyup="autoCalculate($event)" v-model="totalDebt" type="text" />
+                            valueRange: {min: 0, max: 500000}}" class="form-control" placeholder="$0" ref="inputRef" @keyup="autoCalculate($event)" v-model="totalDebt" type="text" />
                         <label class="form-label">Total</label>
                         </div>
                         <!-- <div class="debt-question custom-row mb-md-0">
@@ -153,9 +153,13 @@
         router.push({ path: 'checkrate'});
     },
     autoCalculate(event) {
+        if (parseFloat(this.totalDebt) > 500000) {
+            this.totalDebt = 500000
+            event.target.value = '$500,000'
+            this.calcPayOff();
+        }
         if (event.target.value !== "") {
             this.calcPayOff();
-
         }
 
     },

@@ -27,7 +27,7 @@
                             hideCurrencySymbolOnFocus: false,
                             hideGroupingSeparatorOnFocus: false,
                             hideNegligibleDecimalDigitsOnFocus: false,
-                            valueRange: {min: 0, max: 100000}}" class="form-control" placeholder="$0" ref="inputRef" @keyup="autoCalculate($event)" v-model="totalDebt" type="text" />
+                            valueRange: {min: 0, max: 500000}}" class="form-control" placeholder="$0" ref="inputRef" @keyup="autoCalculate($event)" v-model="totalDebt" type="text" />
                         <label class="form-label">Total</label>
                         </div>
                         <!-- <div class="debt-question custom-row mb-md-0">
@@ -111,7 +111,7 @@
                             hideCurrencySymbolOnFocus: false,
                             hideGroupingSeparatorOnFocus: false,
                             hideNegligibleDecimalDigitsOnFocus: false,
-                            valueRange: {min: 0, max: 100000}}" class="form-control" ref="inputRef2" @change="minPaymentChange()" type="text" @keyup="autoCalculateMin($event)" placeholder="$0" v-model="minTotal"/>
+                            valueRange: {min: 0, max: 500000}}" class="form-control" ref="inputRef2" @change="minPaymentChange()" type="text" @keyup="autoCalculateMin($event)" placeholder="$0" v-model="minTotal"/>
                             <label class="form-label">Total</label>
                             </div>
                         </div>
@@ -283,7 +283,7 @@
                             hideCurrencySymbolOnFocus: false,
                             hideGroupingSeparatorOnFocus: false,
                             hideNegligibleDecimalDigitsOnFocus: false,
-                            valueRange: {min: 0, max: 100000}}"
+                            valueRange: {min: 0, max: 500000}}"
                              class="form-control" placeholder="$0" @keyup="autoCalculatePersonal($event)" v-model="loanAmount"/>
                             <label class="form-label">Amount</label>
                             </div>
@@ -453,6 +453,14 @@
         // this.loanAmount = this.totalDebt;
                                 // eslint-disable-next-line no-console
                                 // console.log(event, event.target.value);
+        if (parseFloat(this.totalDebt) > 500000) {
+            this.totalDebt = 500000
+            event.target.value = '$500,000'
+            this.updateAllLoanAmount();
+            this.calcMinPayment();
+            this.calcPayOff();
+            this.calcPersonalLoan();
+        }
         if (event.target.value !== "") {
             this.updateAllLoanAmount();
             this.calcMinPayment();

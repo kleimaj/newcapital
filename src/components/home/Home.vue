@@ -166,8 +166,8 @@
                     </div>
                       <span v-if="msg.loanamount" class="error-msg">{{msg.loanamount}}</span>
                     </div>
-                    <!-- <vue-turnstile site-key="0x4AAAAAAAIoEXeVt7ZTyzpT" v-model="token" /> -->
-                    <vue-turnstile site-key="1x00000000000000000000AA" v-model="token" />
+                    <vue-turnstile site-key="0x4AAAAAAAIoEXeVt7ZTyzpT" v-model="token" />
+                    <!-- <vue-turnstile site-key="1x00000000000000000000AA" v-model="token" /> -->
 
                      <div
                        class="credit-block d-flex flex-lg-row flex-column align-items-center"
@@ -218,11 +218,9 @@
   <!-- section:4 accomplish section start -->
   <AccomplishSection msg="Accomplish Section" />
   <!-- section:4 End -->
-
+  <DebtCalc />
   <!-- Section 5 newcapital and carusal images -->
   <NewCapitalSection msg="New Capital Section" />
-  <!-- Section: 5 End -->
-  <DebtCalc />
 
   <!-- Section:6 deserve section and check my rate -->
   <DeserveSection msg="Deserve Section" />

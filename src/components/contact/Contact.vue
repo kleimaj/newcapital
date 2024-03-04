@@ -222,7 +222,7 @@ export default {
 .banner-content .personal-details h2 {
   margin: 0px !important;
 } */
-<style scoped > .error-msg {
+.error-msg {
   padding-top: 0px;
   margin-top: 0px;
   font-size: 12px;
