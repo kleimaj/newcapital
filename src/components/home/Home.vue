@@ -55,13 +55,14 @@
                     Financial for:
                   </h2>
                   <ul class="financial-list textleft">
-                    <li>Fast funding within 1-3 business days</li>
-                    <li>No hidden fees or surprises</li>
-                    <li>Simple, secure online application</li>
-                    <li>Fixed rates, clear terms</li>
+                    <li>Applying Won't Hurt Your Credit</li>
+                    <li>Rates as Low as 5.95%</li>
+                    <li>Checking Your Rate is Free</li>
+                    <li>Get Results Instantly</li>
                     <li>
-                      The chance to consolidate debt and save with lower monthly payments
+Receive funds in 24-48 Hours
                     </li>
+                    <li>No Hidden Fees or Surprises</li>
                   </ul>
                 </div>
               </div>
