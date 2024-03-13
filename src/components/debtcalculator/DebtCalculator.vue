@@ -534,6 +534,25 @@
             this.payOffTotalCost = parseFloat(this.totalDebt) + this.payOffTotalInterest;
             this.consolidationTotalCost = parseFloat(this.totalDebt) + this.consolidationTotalInterest;
             this.consolidationSavings = this.payOffTotalCost - this.consolidationTotalCost;
+
+            // var r = (this.loanInterest * .01)/12;
+            // UPDATE
+            var remaining = this.totalDebt;
+            var consolRemaining = this.totalDebt;
+            var totalInterest = 0;
+            var consolTotalInterest = 0;
+            for (let i = 0; i < n1; i++) {
+                var interest= remaining * r1;
+                totalInterest += interest;
+                remaining = remaining - this.payOffMonthly + interest;
+            }
+            for (let i = 0; i < n2; i++) {
+                var consolInterest= consolRemaining * r2;
+                consolTotalInterest += consolInterest;
+                consolRemaining = consolRemaining - this.consolidationMonthly + consolInterest;
+            }
+            this.payOffTotalInterest = totalInterest
+            this.consolidationTotalInterest = consolTotalInterest;
         }
     },
     minPaymentChange() {
