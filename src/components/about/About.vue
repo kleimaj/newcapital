@@ -77,8 +77,7 @@ export default {
                 bannerStriveTitle: 'New Capital strives to:',
                 bannerStriveDescriptionList: `
                     <li>Be the go-to financial partner borrowers can depend on for a personal loan.</li>
-                    <li>Provide a simple, secure platform that gives customers access to our network of lending
-                        partners.</li>
+                    <li>Provide a simple, secure platform that gives customers access to simple solutions.</li>
                     <li>Offer guidance and assistance throughout the process, so our customers feel confident
                         they are getting what they need.</li>
                 `,
