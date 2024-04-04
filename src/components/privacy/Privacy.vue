@@ -7,7 +7,7 @@
           <div class="col-xl-10 col-lg-12 col-md-12">
             <div class="terms-section">
               <div class="position-relative">
-                <h1 class="title blue-text">Terms &amp; Conditions </h1>
+                <h1 class="title blue-text">Privacy Policy</h1>
                 <perfect-scrollbar>
                   <div class="overlay-section">
                     <div class="sidebar-scroll">

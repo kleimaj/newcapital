@@ -553,6 +553,8 @@
             }
             this.payOffTotalInterest = totalInterest
             this.consolidationTotalInterest = consolTotalInterest;
+            this.consolidationTotalCost = parseFloat(this.totalDebt) + this.consolidationTotalInterest;
+
         }
     },
     minPaymentChange() {
